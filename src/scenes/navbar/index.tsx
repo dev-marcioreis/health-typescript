@@ -3,6 +3,9 @@ import { Bars3Icon as Open, XMarkIcon as Close } from '@heroicons/react/24/solid
 import Logo from '@/assets/logo.png'
 import Link from './Link'
 import { SelectedPage } from '@/shared/types'
+import useMediaQuery from '@/hooks/mediaQuery'
+import ActionButton from '@/shared/ActionButton'
+
 
 
 type Props = {
@@ -11,7 +14,9 @@ type Props = {
 };
 
 const Navbar = ( { selectedPage, setSelectedPage }: Props) => {
-    const flexBetween = 'flex items-center justify-between'
+    const flexBetween = 'flex items-center justify-between';
+    const [isMenuToggle, setIsMenuToggle] = useState<boolean>(false)
+    const isMediumScreens = useMediaQuery("(min-width: 1024px)");
 
   return (
     <nav>
@@ -20,10 +25,10 @@ const Navbar = ( { selectedPage, setSelectedPage }: Props) => {
                 <div className={`${flexBetween} w-full gap-16`}>
                     <div className={`${flexBetween}`}>
                         <img src={Logo} alt="Logo" className='w-12'/>
-                        <span>Health</span>
+                        <span className='uppercase font-bold tracking-wide text-blue-600'>Health</span>
                     </div>
-                    <div className={`${flexBetween} w-full`}>
-                        <div className={`${flexBetween} gap-8 text-sm`}>
+                    {isMediumScreens ? (<div className={`${flexBetween} w-full`}>
+                        <div className={`${flexBetween} ml-[7%] gap-16 text-md`}>
                             <Link page='Inicio' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                             <Link page='Beneficios' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                             <Link page='Aulas' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
@@ -31,12 +36,16 @@ const Navbar = ( { selectedPage, setSelectedPage }: Props) => {
                         </div>
                         <div className={`${flexBetween} gap-8`}>
                             <p>Login</p>
-                            <button>Seja Membro</button>
+                            <ActionButton setSelectedPage={setSelectedPage}>Seja Membro</ActionButton>
                         </div>
-                    </div>
+                    </div> ) : 
+                    ( <button className='rounded-full bg-blue-600 p-2' onClick={() => setIsMenuToggle(!isMenuToggle)}>
+                        <Open className='h-6 w-5 text-white' />
+                    </button>)}
                 </div>
             </div>
         </div>
+        
     </nav>
   )
 }
