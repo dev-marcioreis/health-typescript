@@ -39,13 +39,27 @@ const Navbar = ( { selectedPage, setSelectedPage }: Props) => {
                             <ActionButton setSelectedPage={setSelectedPage}>Seja Membro</ActionButton>
                         </div>
                     </div> ) : 
-                    ( <button className='rounded-full bg-blue-600 p-2' onClick={() => setIsMenuToggle(!isMenuToggle)}>
-                        <Open className='h-6 w-5 text-white' />
+                    ( <button onClick={() => setIsMenuToggle(!isMenuToggle)}>
+                        <Open className='w-8 text-blue-600' />
                     </button>)}
                 </div>
             </div>
         </div>
-        
+        {!isMediumScreens && isMenuToggle && (
+            <div className='fixed right-0 bottom-0 z-40 h-full w-[220px] bg-bg-color drop-shadow-xl'>
+                <div className='flex justify-end p-6'>
+                    <button onClick={() => setIsMenuToggle(!isMenuToggle)}>
+                        <Close className='w-8 text-blue-600' />
+                    </button>
+                </div>
+                <div className='ml-[33%] flex flex-col gap-10 mt-10 text-xl'>
+                    <Link page='Inicio' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                    <Link page='Beneficios' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                    <Link page='Aulas' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                    <Link page='Contato' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                </div>
+            </div>
+        )}
     </nav>
   )
 }
