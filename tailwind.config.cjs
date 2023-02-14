@@ -19,8 +19,24 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred": "linear-gradient(90deg, #ff616a0%, #ffc837 100%)",
-      })
+        "mobile-home": "url('./assets/homeImg.png)",
+      }),
+      fontFamily: {
+        dmsans: ["DM Sans", "sans-sefif"],
+        montserrat: ["Montserrat", "sans-sefif"]
+      },
+      content: {
+        evolvetex: "url('./assets/text.png')",
+        abstractwaves: "url('./assets/waves.png')",
+        sparkles: "url('./assets/sparkles.png')",
+        circles: "url('./assets/circles.png')",
+      },
     },
+    screens: {
+      xs: "480px",
+      sm: "768px",
+      md: "1024px",
+    }
   },
   plugins: [],
 }
