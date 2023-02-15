@@ -4,3 +4,8 @@ export enum SelectedPage {
   Classes = "aulas",
   Contact = "contato"
 }
+
+export interface BenefitType {
+  title: string;
+  description: string;
+}

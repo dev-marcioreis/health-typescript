@@ -11,3 +11,12 @@ html, body, #root, .app {
     @apply bg-bg-color;
     @apply text-gray-20;
 }
+::-webkit-scrollbar{
+    width: .5rem;
+ }
+ ::-webkit-scrollbar-track{
+    @apply bg-bg-color;
+ }
+ ::-webkit-scrollbar-thumb{
+    @apply bg-blue-900;
+ }
