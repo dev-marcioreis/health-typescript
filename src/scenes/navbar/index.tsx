@@ -52,7 +52,7 @@ const Navbar = ( { selectedPage, setSelectedPage }: Props) => {
                         <Close className='w-8 text-blue-600' />
                     </button>
                 </div>
-                <div className='ml-[33%] flex flex-col gap-10 mt-10 text-xl'>
+                <div className='ml-[33%] flex flex-col gap-10 mt-10'>
                     <Link page='Inicio' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                     <Link page='Beneficios' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                     <Link page='Aulas' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
