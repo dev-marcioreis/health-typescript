@@ -3,6 +3,7 @@ import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
 import HomeImg from '@/assets/homeImg.png'
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { motion } from "framer-motion";
 
 
 type Props = {
@@ -15,7 +16,15 @@ function Home({ setSelectedPage }: Props) {
   return (
     <section id="home" className="gap-16 py-10 md:h-full md:pb-0 bg-blue-900">
         <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
-            <div className="z-10 mt-20 md:basis-3/5 ml-10">
+            <motion.div className="z-10 mt-20 md:basis-3/5 ml-10" 
+                initial="hidden" 
+                whileInView="visible" 
+                viewport={{ once: true, amount: 0.5 }} 
+                transition={{ duration: 1 }} 
+                variants={{ 
+                    hidden: {opacity: 0, x:100}, 
+                    visible: {opacity: 1, x: 0} 
+                }} >
                 <div className="md:-mt-20">
                     <h1 className="text-4xl font-bold text-blue-500 uppercase mb-3">Evolução constante</h1>
                     <p className="mb-5 text-md text-gray-100">Os melhores equipamentos, infraestrutura e muito mais com mensalidades acessíveis.</p>
@@ -30,12 +39,20 @@ function Home({ setSelectedPage }: Props) {
                         </AnchorLink>
                     </div>
                 </div>
-            </div>
-            <div className="flex justify-center md:ml-30 md:mt-16 md:justify-items-end">
+            </motion.div>
+            <motion.div className="flex justify-center md:ml-30 md:mt-16 md:justify-items-end" 
+                initial="hidden" 
+                whileInView="visible" 
+                viewport={{ once: true, amount: 0.5 }} 
+                transition={{ duration: 1 }} 
+                variants={{ 
+                    hidden: {opacity: 0, x:-100}, 
+                    visible: {opacity: 1, x: 0} 
+                }}>
                 <img src={HomeImg} alt="Home image" className="w-96 mt-16 grayscale brightness-150" />
-            </div>
+            </motion.div>
         </div>
-        <div className="h-14 w-full bg-gradient-to-l from-sky-500 blur-2xl"></div>
+        <div className="h-14 w-full bg-gradient-to-r from-sky-500 blur-2xl"></div>
     </section>
   )
 }
