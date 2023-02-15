@@ -8,5 +8,6 @@ html, body, #root, .app {
     width: 100%;
     height: 100%;
     font-family: 'DM Sans', sans-serif;
+    @apply bg-bg-color;
     @apply text-gray-20;
 }

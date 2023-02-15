@@ -14,8 +14,9 @@ function Home({ setSelectedPage }: Props) {
     const isMediumScreens = useMediaQuery("(min-width:1024px)");
 
   return (
-    <section id="home" className="gap-16 py-10 md:h-full md:pb-0 bg-blue-900">
-        <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
+    <section id="home" className="gap-16 py-10 md:h-full md:pb-0">
+        <motion.div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+            onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
             <motion.div className="z-10 mt-20 md:basis-3/5 ml-10" 
                 initial="hidden" 
                 whileInView="visible" 
@@ -51,7 +52,7 @@ function Home({ setSelectedPage }: Props) {
                 }}>
                 <img src={HomeImg} alt="Home image" className="w-96 mt-16 grayscale brightness-150" />
             </motion.div>
-        </div>
+        </motion.div>
         <div className="h-14 w-full bg-gradient-to-r from-sky-500 blur-2xl"></div>
     </section>
   )
