@@ -18,11 +18,11 @@ const Navbar = ( { topPage, selectedPage, setSelectedPage }: Props) => {
     const flexBetween = 'flex items-center justify-between';
     const [isMenuToggle, setIsMenuToggle] = useState<boolean>(false)
     const isMediumScreens = useMediaQuery("(min-width: 1024px)");
-    const navbarBg = topPage ? "" : "bg-blue-600 drop-shadow";
+    const navbarBg = topPage ? "" : "bg-blue-900 drop-shadow";
 
   return (
     <nav>
-        <div className={`${navbarBg} ${flexBetween} fixed top-0 z-30 w-full py-4 shadow-md`}>
+        <div className={`${navbarBg} ${flexBetween} fixed top-0 z-30 w-full py-4 bg-bg-color shadow-md`}>
             <div className={`${flexBetween} mx-auto w-5/6`}>
                 <div className={`${flexBetween} w-full gap-16`}>
                     <div className={`${flexBetween}`}>
@@ -38,7 +38,7 @@ const Navbar = ( { topPage, selectedPage, setSelectedPage }: Props) => {
                         </div>
                         <div className={`${flexBetween} gap-8`}>
                             <p>Login</p>
-                            <div className="rounded-sm px-2 py-1 text-center transition ease-in-out bg-blue-600 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-500" >
+                            <div>
                                 <ActionButton setSelectedPage={setSelectedPage}>Seja Membro</ActionButton>
                             </div>
                         </div>
