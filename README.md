@@ -6,7 +6,7 @@ Framer Motion<br>
 Tailwind<br>
 Tailwind Hero icons<br>
 Link de acesso: https://dev-marcioreis.github.io/health-typescript/
-![image](https://user-images.githubusercontent.com/122680054/219070825-4e4ca05a-969a-47ea-ab1e-7c537d0f0130.png)
-![image](https://user-images.githubusercontent.com/122680054/219071265-877ac557-0316-4f61-bd16-339026600d64.png)
+![image](https://user-images.githubusercontent.com/122680054/219083972-a9fa1da6-87d8-449a-81a2-5ad905a77ce3.png)
+![image](https://user-images.githubusercontent.com/122680054/219084057-1c4c7ec5-2b52-47ab-92b3-c78c9b47595b.png)
 
 
