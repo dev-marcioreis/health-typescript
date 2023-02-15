@@ -19,6 +19,13 @@ const benefits: Array<BenefitType> = [
     }
 ];
 
+const container = {
+    hidden: {},
+    visible: {
+        transition: { staggerChildren: 0.2 }
+    }
+}
+
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -30,16 +37,28 @@ const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}>
-            <div className="text-center">
+            <motion.div className="text-center"
+                initial="hidden" 
+                whileInView="visible" 
+                viewport={{ once: true, amount: 0.5 }} 
+                transition={{ duration: 1 }} 
+                variants={{ 
+                    hidden: {opacity: 0, y:-50}, 
+                    visible: {opacity: 1, y: 0} 
+                }}>
                 <TextHeaders>Coloque a preguiça para correr</TextHeaders>
                 <p className="mt-5 text-md">Nosso objetivo é levar e democratizar a atividade fisica para todos.</p>
                 <p className="mb-5 text-md">Nossa principal missão é transformar vidas através da atividade fisica em todas as classes da sociedade Brasileira.</p>
-            </div>
-            <div className="md:flex items-center justify-between gap-8">
+            </motion.div>
+            <motion.div className="md:flex items-center justify-between gap-8"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={ container }>
                 {benefits.map((benefit: BenefitType) => (
                     <Benefit key={benefit.title} title={benefit.title} description={benefit.description} setSelectedPage={setSelectedPage} />
                 ))}
-            </div>
+            </motion.div>
         </motion.div>
     </section>
   )
