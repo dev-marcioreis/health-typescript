@@ -33,7 +33,7 @@ const Navbar = ( { topPage, selectedPage, setSelectedPage }: Props) => {
                         <div className={`${flexBetween} ml-[7%] gap-16 text-md`}>
                             <Link page='Inicio' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                             <Link page='Beneficios' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                            <Link page='Aulas' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                            <Link page='Sobre' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                             <Link page='Contato' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         </div>
                         <div className={`${flexBetween} gap-8`}>
