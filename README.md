@@ -1,5 +1,5 @@
 # Health (Typescript)
-Iniciando novo projeto em TypeScript.<br>
+Projeto em TypeScript.<br>
 React<br>
 Vite<br>
 Framer Motion<br>
