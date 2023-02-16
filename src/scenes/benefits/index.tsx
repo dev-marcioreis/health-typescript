@@ -62,21 +62,55 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 ))}
             </motion.div>
             <div className="mt-20 items-stretch justify-center gap-5 md:mt-28 md:flex">
-                <div className="relative">
+                <motion.div className="relative"
+                    initial="hidden" 
+                    whileInView="visible" 
+                    viewport={{ once: true, amount: 0.5 }} 
+                    transition={{ duration: 1 }} 
+                    variants={{ 
+                        hidden: {opacity: 0, x:-50}, 
+                        visible: {opacity: 1, x: 0} 
+                    }}>
                     <img src={AboutImg} alt="Aboout image" className="brightness-150" />
-                    <img src={SparklesImg} alt="About image" className="absolute top-0 -z-10 grayscale brightness-150" />
-                </div>
-                <div>
+                    <motion.div className="absolute top-0 -z-10"
+                        initial="hidden" 
+                        whileInView="visible" 
+                        viewport={{ once: true, amount: 0.5 }} 
+                        transition={{ duration: 1 }} 
+                        variants={{ 
+                            hidden: {opacity: 0, y:100}, 
+                            visible: {opacity: 1, y: 0} 
+                        }}>
+                        <img src={SparklesImg} alt="About image" className="grayscale brightness-150" />
+                    </motion.div>
+                </motion.div>
+                <motion.div
+                    initial="hidden" 
+                    whileInView="visible" 
+                    viewport={{ once: true, amount: 0.5 }} 
+                    transition={{ duration: 1 }} 
+                    variants={{ 
+                        hidden: {opacity: 0, x:50}, 
+                        visible: {opacity: 1, x: 0} 
+                    }}>
                     <div className="text-center md:mt-60">
                         <TextHeaders>A sua melhor opção na hora de levar uma vida + saudável</TextHeaders>
-                        <div className="mt-5 flex flex-col gap-4">
+                        <motion.div className="mt-5 flex flex-col gap-4"
+                            initial="hidden" 
+                            whileInView="visible" 
+                            viewport={{ once: true, amount: 0.5 }} 
+                            transition={{ duration: 1 }} 
+                            variants={{ 
+                                hidden: {opacity: 0, y:50}, 
+                                visible: {opacity: 1, y: 0} 
+                            }}>
                             <p>Nosso exclusivo circuito de emagrecimento, intenso e com duração de 30 minutos.</p>
                             <p>Emagrecimento com ganho de condicionamento físico em apenas 30 minutos.</p>
                             <p>Um treino intervalado de alta intensidade que usa o peso do próprio corpo.</p>
                             <p>É um treino coletivo de hipertrofia, com foco em fortalecimento muscular.</p>
-                        </div>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </motion.div>
     </section>
