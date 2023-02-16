@@ -49,7 +49,7 @@ const About = ({ setSelectedPage }: Props) => {
                     }}>
                 <div className="text-center md:mt-10">
                     <TextHeaders>A sua melhor opção na hora de levar uma vida + saudável</TextHeaders>
-                <motion.div className="mt-5 flex flex-col gap-4"
+                <motion.div className="mt-5 flex flex-col gap-4 text-gray-100"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
