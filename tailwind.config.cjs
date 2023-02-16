@@ -26,12 +26,6 @@ module.exports = {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"]
       },
-      content: {
-        evolvetex: "url('./assets/text.png')",
-        abstractwaves: "url('./assets/waves.png')",
-        sparkles: "url('./assets/sparkles.png')",
-        circles: "url('./assets/circles.png')",
-      },
     },
     screens: {
       xs: "480px",

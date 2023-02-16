@@ -3,6 +3,8 @@ import TextHeaders from "@/shared/TextHeaders";
 import { BenefitType, SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import Benefit from "./Benefit";
+import AboutImg from '@/assets/AboutImg.png'
+import SparklesImg from '@/assets/sparkles.png'
 
 const benefits: Array<BenefitType> = [
     {
@@ -59,6 +61,23 @@ const Benefits = ({ setSelectedPage }: Props) => {
                     <Benefit key={benefit.title} title={benefit.title} description={benefit.description} setSelectedPage={setSelectedPage} />
                 ))}
             </motion.div>
+            <div className="mt-20 items-stretch justify-center gap-5 md:mt-28 md:flex">
+                <div className="relative">
+                    <img src={AboutImg} alt="Aboout image" className="brightness-150" />
+                    <img src={SparklesImg} alt="About image" className="absolute top-0 -z-10 grayscale brightness-150" />
+                </div>
+                <div>
+                    <div className="text-center md:mt-60">
+                        <TextHeaders>A sua melhor opção na hora de levar uma vida + saudável</TextHeaders>
+                        <div className="mt-5 flex flex-col gap-4">
+                            <p>Nosso exclusivo circuito de emagrecimento, intenso e com duração de 30 minutos.</p>
+                            <p>Emagrecimento com ganho de condicionamento físico em apenas 30 minutos.</p>
+                            <p>Um treino intervalado de alta intensidade que usa o peso do próprio corpo.</p>
+                            <p>É um treino coletivo de hipertrofia, com foco em fortalecimento muscular.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </motion.div>
     </section>
   )
