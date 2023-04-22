@@ -1,4 +1,4 @@
-### Health (Typescript)
+### Health
 
 ---
 
@@ -7,7 +7,7 @@ Esta é uma landing page para academias ou profissionais da área.
 ## 🚀 Finalizado!
 
 ## 📋 Técnologias
-React + Vite + Framer Motion + Tailwind
+React + Typescript + Framer Motion + Tailwind
 
 ## ✒️ Autor
 Márcio Reis
