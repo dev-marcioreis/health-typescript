@@ -6,7 +6,7 @@ Esta é uma landing page para academias ou profissionais da área.
 
 ## 🚀 Finalizado!
 
-## 📋 Técnologias
+## 📋 Tecnologias
 React + Typescript + Framer Motion + Tailwind
 
 ## ✒️ Autor
