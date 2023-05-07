@@ -2,7 +2,7 @@
 
 ---
 
-Esta é uma landing page para academias ou profissionais da área.
+Esta é uma landing page para academias ou profissionais da área fitness.
 
 ## 🚀 Finalizado!
 
